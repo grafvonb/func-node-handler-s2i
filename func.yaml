@@ -1,0 +1,24 @@
+specVersion: 0.34.0
+name: func-node-handler
+runtime: node
+registry: docker.io/grafvonb
+image: docker.io/grafvonb/func-node-handler:latest
+imageDigest: sha256:b8bec991ca4768994e31acab28aa86aeb448d09274505500393dd09b9cf42d1d
+created: 2022-10-20T17:26:14.529039+02:00
+invocation:
+  format: http
+build:
+  buildpacks: []
+  builder: s2i
+  buildEnvs: []
+run:
+  volumes: []
+  envs: []
+deploy:
+  namespace: knative-serving
+  annotations: {}
+  options: {}
+  labels: []
+  healthEndpoints:
+    liveness: /health/liveness
+    readiness: /health/readiness
